@@ -22,6 +22,13 @@ filetype plugin on
 " set spell
 set spelllang=en,it
 
+
+
+
+
+set undofile
+set undodir=~/.cache/neovim/
+
 "bracket completion
 "inoremap " ""<left>
 "inoremap ' ''<left>

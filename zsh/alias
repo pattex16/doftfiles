@@ -13,6 +13,7 @@ alias su="tmux rename-window 'root@$hostname_short' ;tmux set-window-option wind
 # alias yay="pikaur "
 alias yarn="yarn --use-yarnrc $HOME/.config/yarn/yarnrc"
 alias jshell="jsh "
+alias vim="vim -O "
 
 alias vultr="tmux rename-window 'ssh@vultr' ;tmux set-window-option window-status-current-style 'fg=black bg=purple'; tmux set-window-option window-status-style 'fg=purple' ; ssh selz@95.179.179.23 "
 # if [ $USER = "selz" ] ; then alias pacman="pikaur " ; fi
