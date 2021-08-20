@@ -1,4 +1,0 @@
-[Running] cd "/home/selz/" && gcc test.c -o test && "/home/selz/"test
-
-[Done] exited with code=null in 4801.387 seconds
-

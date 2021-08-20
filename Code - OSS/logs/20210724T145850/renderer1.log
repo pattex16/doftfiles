@@ -1,8 +1,0 @@
-[2021-07-24 14:58:51.505] [renderer1] [error] Error: Unable to read file '/home/selz/test.c' (Error: Unable to resolve non-existing file '/home/selz/test.c')
-    at Object.s [as createErrorWithActions] (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:9:490)
-    at i.handleSetInputError (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2355:163055)
-    at i.handleSetInputError (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2355:167081)
-    at i.setInput (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2355:162772)
-    at async u.doSetInput (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2355:131518)
-    at async u.openEditor (vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2355:129942)
-    at async vscode-file://vscode-app/usr/lib/code/out/vs/workbench/workbench.desktop.main.js:2567:15994

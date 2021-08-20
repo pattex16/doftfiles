@@ -1,7 +1,0 @@
-[Trace  - 21:22:50.27] Token acquired from secret storage.
-[Trace  - 21:22:50.27] Read the following session from the keychain with the following scopes: repo,workflow
-[Trace  - 21:22:50.27] Read the following session from the keychain with the following scopes: read:user,repo,user:email
-[Info  - 21:22:50.27] Getting user info...
-[Info  - 21:22:50.29] Getting user info...
-[Error  - 21:22:50.85] request to https://api.github.com/user failed, reason: getaddrinfo EAI_AGAIN api.github.com
-[Error  - 21:22:50.85] request to https://api.github.com/user failed, reason: getaddrinfo EAI_AGAIN api.github.com
