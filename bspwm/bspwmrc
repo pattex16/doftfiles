@@ -31,18 +31,18 @@ bspc rule -a Emoji-keyboard focus=on state=floating center=on rectangle=600x400+
 bspc rule -a Magnus focus=on state=floating center=on rectangle=800x600+560+240
 bspc rule -a Kupfer.py focus=on center=on
 bspc rule -a Gnome-calculator focus=on center=on state=floating
-bspc rule -a Xfce4-terminal:*:scratchpad sticky=on state=floating rectangle=1600x280+160+38
-bspc rule -a Florence sticky=on state=floating rectangle=1600x400+160+660 focus=off manage=off
+# bspc rule -a Xfce4-terminal:*:scratchpad sticky=on state=floating rectangle=1600x280+160+38
+# bspc rule -a Florence sticky=on state=floating rectangle=1600x400+160+660 focus=off manage=off
 # bspc rule -a Xfce4-panel layer=below
 
 export QT_STYLE_OVERRIDE=kvantum
 
-if [[ $1 -gt 0 ]];
-then
-[[ -z $(pidof plank) ]] && plank || pkill plank ; plank &
-else
-  xfce4-terminal & plank &
-fi
+# if [[ $1 -gt 0 ]];
+# then
+# [[ -z $(pidof plank) ]] && plank || pkill plank ; plank &
+# else
+#   xfce4-terminal & plank &
+# fi
 
 setxkbmap -option "caps:escape" &
 #xfce4-panel -d -r&
@@ -64,3 +64,4 @@ kupfer --no-splash &
 xsetroot -cursor_name left_ptr &
 bspc config -d 1
 picom --config ~/.config/picom/picomrc --experimental -d -b &
+
