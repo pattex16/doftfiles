@@ -114,6 +114,11 @@ then
   set $run_tmux false
 fi
 
+if [[ $DONTUSETMUX ]];
+then
+  set $run_tmux false
+fi
+
 if [[ $run_tmux = true ]];
 then
   if [[ -z $TMUX ]] && [[ $USER != "root" ]] ; then exec tmux; fi
