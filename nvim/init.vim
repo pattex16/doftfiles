@@ -21,11 +21,6 @@ syntax on
 filetype plugin on
 " set spell
 set spelllang=en,it
-
-
-
-
-
 set undofile
 set undodir=~/.cache/neovim/
 
@@ -68,7 +63,6 @@ noremap L w
 " map J j
 " map K k
 map Q gq
-
 
 if exists('g:vscode')
 

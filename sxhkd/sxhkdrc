@@ -76,14 +76,37 @@ super + Print
 super + alt + Print
   peek
 
+XF86AudioRaiseVolume
+  amixer set Master 5%+ 1>/dev/null
+
+# Decrease volume
+XF86AudioLowerVolume
+  amixer set Master 5%- 1>/dev/null
+
+# Mute Audio
+XF86AudioMute
+  amixer -D pulse set Master 1+ toggle 1>/dev/null
+
+XF86AudioMicMute
+  amixer -D pulse set Capture 1+ toggle 1>/dev/null
+
 super + Down
-  sh -c "sleep 1 ; xdotool key XF86AudioPlay"
+  playerctl play-pause
 
 super + Left
-  sh -c "sleep 1 ; xdotool key XF86AudioPrev"
+  playerctl previous
 
 super + Right
-  sh -c "sleep 1 ; xdotool key XF86AudioNext"
+  playerctl next
+
+XF86MonBrightnessUp
+  brightnessctl s +5%
+
+XF86MonBrightnessDown
+  [[ $(brightnessctl g) -gt 91 ]] && brightnessctl s 5%-
+
+super + F5
+  ~/.local/bin/script/switchBacklight
 
 super + r
 	kupfer
