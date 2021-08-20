@@ -1,8 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Alt Tab
-Exec=/usr/bin/gnome-pie -o 629
-Encoding=UTF-8
-Type=Application
-Icon=preferences-system-windows
-StartupWMClass=gnome-pie-629

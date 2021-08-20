@@ -8,26 +8,32 @@
 super + Return
  kitty
 
-# super + grave
-#   ~/.local/bin/script/bspwm/next-desktop
+super + 1
+  jumpapp ~/.local/bin/script/chrome
 
-# super + shift + grave
-#   ~/.local/bin/script/bspwm/move-blank-desktop
+super + shift + 1
+  ~/.local/bin/script/chrome
 
-super + {_,shift + } grave
-  ~/.local/bin/script/bspwm/next-desktop-sticky-plank {next,prev}
+super + 2
+  jumpapp nautilus
 
-# super + shift + grave
-#   ~/.local/bin/script/bspwm/move-blank-desktop-sticky-plank
+super + shift + 2
+  nautilus
 
-# super + {_,shift + } Tab
-#   ~/.local/bin/script/bspwm/tab-cycle-window {next,prev}
+super + 3
+  jumpapp kitty
+
+super + shift + 3
+  kitty
+
+super + 4
+  jumpapp code
+
+super + shift + 4
+  code
    
 super + {_,shift + } Tab
   bspc node -f {next,prev}.!hidden.window
-
-# super + {h,j,k,l}
-# 	~/.local/bin/script/bspwm/switch-window {west,south,north,east}
 
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
@@ -47,7 +53,7 @@ super + d
 super + v
   ~/.local/bin/script/bspwm/show-clipman
 
-super + {_,shift + }q
+super + {_,shift + }w
 	~/.local/bin/script/bspwm/quit-node {c,k}
 
 # screenshots
@@ -70,14 +76,14 @@ super + Print
 super + alt + Print
   peek
 
-# super + Down
-#   sh -c "sleep 1 ; xdotool key XF86AudioPlay"
+super + Down
+  sh -c "sleep 1 ; xdotool key XF86AudioPlay"
 
-# super + Left
-#   sh -c "sleep 1 ; xdotool key XF86AudioPrev"
+super + Left
+  sh -c "sleep 1 ; xdotool key XF86AudioPrev"
 
-# super + Right
-#   sh -c "sleep 1 ; xdotool key XF86AudioNext"
+super + Right
+  sh -c "sleep 1 ; xdotool key XF86AudioNext"
 
 super + r
 	kupfer
@@ -88,13 +94,10 @@ super + Escape
 super + backslash
   ~/.local/bin/script/bspwm/scratchpad
 
-super + shift + {s,e,a}
-  /usr/bin/{chromium,thunar,mousepad}
-
-super + bracket{left,right}
+super + {comma,period}
 	bspc desktop -f {prev,next}.local
 
-super + shift + bracket{left,right}
+super + shift + {comma,period}
   bspc node -d {prev,next}.local --follow;
 
 super + alt + {q,r}
@@ -103,14 +106,14 @@ super + alt + {q,r}
 super + g
 	bspc node -s biggest.window
 
-super + {_,shift + }{1-6}
-	bspc {desktop -f,node -d} '^{1-6}'
+# super + {_,shift + }{1-6}
+# 	bspc {desktop -f,node -d} '^{1-6}'
 
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+# super + ctrl + {h,j,k,l}
+# 	bspc node -p {west,south,north,east}
 
-super + ctrl + space
-	bspc node -p cancel
+# super + ctrl + space
+# 	bspc node -p cancel
 
 super + alt + {h,j,k,l}
   n=20; \
