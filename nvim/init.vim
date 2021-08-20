@@ -64,17 +64,13 @@ noremap L w
 " map K k
 map Q gq
 
-if exists('g:vscode')
+if !exists('g:vscode')
 
-if len($TMUX) > 1
+if !empty($TMUX)
 autocmd VimEnter,BufWrite,BufNewFile,BufRead,BufReadPost,FileReadPost,BufNewFile * call system("tmux set-window-option window-status-current-style 'fg=black bg=yellow';tmux set-window-option window-status-style 'fg=yellow'")
 autocmd VimEnter,BufWrite,BufNewFile,BufRead,BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%:t"))
 endif
-" autocmd BufRead,BufNewFile *.txt silent! setlocal spell
 
-else
-"plugin remaps
-"
 call plug#begin('$HOME/.local/share/nvim/site/autoload/plug.nvim')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-snippets'
@@ -137,8 +133,6 @@ command Code !code %
 
 "autocmd
 autocmd VimLeave *.js,*.js,*.css,*.c,*.cpp,*.h,*.html,*.xml,*.java,*.js,*.json,*.go,*.py Autoformat
-
-
 
 autocmd FileType * RainbowParentheses
 

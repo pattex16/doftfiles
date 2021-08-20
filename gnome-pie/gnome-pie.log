@@ -298,3 +298,4 @@
 [2021:08:20:17:25:14:321737 MESSAGE] Welcome to Gnome-Pie 0.7.3!
 [2021:08:20:17:25:14:325054 MESSAGE] Loading Pies from "/home/selz/.config/gnome-pie/pies.conf".
 [2021:08:20:17:25:16:235282 MESSAGE] Started happily...
+[2021:08:20:19:08:41:687985 MESSAGE] Caught signal (15), bye!

@@ -8,7 +8,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc config top_padding 38
+bspc config top_padding 0
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
@@ -27,7 +27,7 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
 
-bspc rule -a Gnome-pie manage=off layer=above border=off focus=off locked=on marked=on sticky=on
+bspc rule -a Gnome_pie manage=off layer=above border=off focus=off locked=on marked=on sticky=on
 bspc rule -a Peek focus=on state=floating center=on rectangle=600x480
 # bspc rule -a Emoji-keyboard focus=on state=floating center=on rectangle=600x400+1500+52
 bspc rule -a Magnus focus=on state=floating center=on rectangle=800x600+560+240
@@ -48,10 +48,10 @@ setxkbmap -option "caps:escape" &
 feh --bg-scale ~/Pictures/Wallpapers/wall.png &
 kupfer --no-splash &
 xsetroot -cursor_name left_ptr &
-bspc config -d 1 
-xset r rate 260 60 %
+bspc config -d 1 &
+xset r rate 260 60 &
 unclutter &
 picom --config ~/.config/picom/picomrc --experimental -d -b &
-[[ -z $(pidof gnome-pie) ]] && gnome-pie &
-# [[ -z $(pidof tint2) ]] && tint2 &
+# [[ -z $(pidof gnome-pie) ]] && gnome-pie &
+[[ -z $(pidof polybar) ]] && polybar example || pkill polybar ; polybar example &
 
