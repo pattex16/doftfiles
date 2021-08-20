@@ -4,7 +4,6 @@
 # \__ \  __/ |/ /_____/ /\__ \ | | |
 # |___/\___|_/___|   /___|___/_| |_|
 
-
 tmux_user="selz"
 hostname_short=$(hostname | cut -c -5)
 source "$ZDOTDIR/alias"
