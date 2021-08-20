@@ -1,0 +1,9 @@
+[Info] /home/selz/.ssh/config: ENOENT: no such file or directory, open '/home/selz/.ssh/config'
+[Info] Looking for git repository
+[Info] Git repository found, initializing review manager and pr tree view.
+[Info] Review> Validate state in progress
+[Info] Review> Validating state...
+[Info] No remote with name 'upstream' found.
+[Info] Found GitHub remote
+[Info] Review> no matching pull request metadata found for current branch main
+[Info] Review> no matching pull request metadata found on GitHub for current branch main

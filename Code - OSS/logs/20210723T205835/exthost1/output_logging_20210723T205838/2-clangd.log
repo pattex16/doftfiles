@@ -1,0 +1,30 @@
+I[20:58:38.315] clangd version 12.0.1
+I[20:58:38.315] PID: 55305
+I[20:58:38.315] Working directory: /home/selz
+I[20:58:38.315] argv[0]: /usr/bin/clangd
+I[20:58:38.315] Starting LSP over stdin/stdout
+I[20:58:38.315] <-- initialize(0)
+I[20:58:38.315] Client supports legacy semanticHighlights notification and standard semanticTokens request, choosing the latter (no notifications).
+I[20:58:38.315] --> reply:initialize(0) 0 ms
+I[20:58:38.335] <-- initialized
+I[20:58:38.335] <-- textDocument/didOpen
+I[20:58:38.335] Failed to find compilation database for /home/selz/test.c
+I[20:58:38.335] ASTWorker building file /home/selz/test.c version 1 with command clangd fallback
+[/home/selz]
+/usr/bin/clang /home/selz/test.c -fsyntax-only -resource-dir=/usr/lib/clang/12.0.1
+I[20:58:38.337] --> textDocument/clangd.fileStatus
+I[20:58:38.392] --> textDocument/publishDiagnostics
+I[20:58:38.392] --> textDocument/clangd.fileStatus
+I[20:58:38.614] <-- textDocument/documentLink(1)
+I[20:58:38.615] --> reply:textDocument/documentLink(1) 0 ms
+I[20:58:38.615] --> textDocument/clangd.fileStatus
+I[20:58:38.761] <-- textDocument/semanticTokens/full(2)
+I[20:58:38.761] --> reply:textDocument/semanticTokens/full(2) 0 ms
+I[20:58:38.761] --> textDocument/clangd.fileStatus
+I[20:58:39.197] <-- textDocument/documentSymbol(3)
+I[20:58:39.198] --> reply:textDocument/documentSymbol(3) 0 ms
+I[20:58:39.198] --> textDocument/clangd.fileStatus
+I[20:58:42.238] <-- shutdown(4)
+I[20:58:42.238] --> reply:shutdown(4) 0 ms
+E[20:58:42.240] Transport error: Input/output error
+I[20:58:42.240] LSP finished, exiting with status 1

@@ -1,0 +1,9 @@
+[Trace  - 10:07:46.188] Token acquired from secret storage.
+[Trace  - 10:07:46.188] Read the following session from the keychain with the following scopes: repo,workflow
+[Trace  - 10:07:46.188] Read the following session from the keychain with the following scopes: read:user,repo,user:email
+[Info  - 10:07:46.188] Getting user info...
+[Info  - 10:07:46.191] Getting user info...
+[Info  - 10:07:46.517] Got account info!
+[Info  - 10:07:46.517] Verified sesion with the following scopes: read:user,repo,user:email
+[Info  - 10:07:46.517] Got account info!
+[Info  - 10:07:46.518] Verified sesion with the following scopes: repo,workflow
