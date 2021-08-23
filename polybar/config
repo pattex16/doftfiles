@@ -57,12 +57,12 @@ font-0 = fixed:pixelsize=10;1
 ; font-2 = siji:pixelsize=10;1
 
 ; font-0 = "RobotoMono Nerd Font Mono:style=Regular:size=10"
-font-1 = "RobotoMono Nerd Font Mono:style=Regular:size=12"
-font-2 = "RobotoMono Nerd Font Mono:style=Regular:size=12"
+font-1 = "RobotoMono Nerd Font Mono:style=Regular:size=10"
+font-2 = "RobotoMono Nerd Font Mono:style=Regular:size=10"
 
 modules-left = bspwm
 modules-center = 
-modules-right = now-playing filesystem xbacklight pulseaudio memory cpu wlan eth battery-combined-udev temperature date powermenu
+modules-right = now-playing xbacklight pulseaudio memory cpu temperature system-bluetooth-bluetoothctl wlan eth battery-combined-udev date
 
 tray-position = right
 tray-padding = 2
@@ -210,6 +210,13 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+[module/system-bluetooth-bluetoothctl]
+type = custom/script
+exec = ~/.config/polybar/system-bluetooth-bluetoothctl
+tail = true
+click-left = gnome-control-center bluetooth &
+format-underline = #81D4FA
+
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
@@ -221,7 +228,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
-label = %percentage:2%%
+label =  %percentage:2%%
 
 [module/memory]
 type = internal/memory
@@ -229,29 +236,30 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected = 直 <ramp-signal> <label-connected>
+format-connected-underline = #FF8A65
 label-connected = %essid%
+click-left = "gnome-control-center wifi"
 
-format-disconnected =
+format-disconnected = 睊
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 20%
+ramp-signal-1 = 40%
+ramp-signal-2 = 60%
+ramp-signal-3 = 80%
+ramp-signal-4 = 100%
+ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
@@ -279,7 +287,7 @@ time = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = #8ab4f8
 
 label = %date% %time%
 
@@ -290,7 +298,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -382,13 +390,13 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
+format = <label>
+format-underline = #FFF176
+format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = %temperature-c%
-label-warn = %temperature-c%
+label =  %temperature-c%
+label-warn =  %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
@@ -437,4 +445,13 @@ pseudo-transparency = true
 margin-top = 5
 margin-bottom = 5
 
+[module/windowlist]
+type = custom/script
+exec = ${env:P_BSPWM_WINDOW_CMD}
+interval = 0.5
+format = <label>
+format-background = #b2242424
+format-foreground = #dfdfdf
+
 ; vim:ft=dosini
+

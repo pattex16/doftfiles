@@ -54,7 +54,9 @@ unclutter &
 dunst -lb "#242424b2" -nb "#242424b2" -cb "#242424b2" -lfr "#8AB4F8" -nfr "#8AB4F8" -cfr "#8AB4F8" -lf "#f7f7f7" -nf "#f7f7f7" -cf "#f7f7f7" -lh "#FF1744" -nh "#FF1744" -ch "#FF1744"&
 picom --config ~/.config/picom/picomrc --experimental -d -b &
 # [[ -z $(pidof gnome-pie) ]] && gnome-pie &
-[[ -z $(pidof polybar) ]] && polybar bspwm_gnome || pkill polybar ; polybar bspwm_gnome &
+# [[ -z $(pidof polybar) ]] && polybar bspwm_gnome || pkill polybar ; polybar bspwm_gnome &
 
-while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f bspwm_window_titles; done
-bspwm_window_titles &
+~/.config/polybar/launch.sh &
+
+# while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f ~/.config/polybar/bspwm_window_titles; done ~/.config/polybar/bspwm_window_titles &
+
