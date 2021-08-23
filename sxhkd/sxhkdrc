@@ -61,20 +61,20 @@ super + {_,shift + }w
 
 # screenshots
 
-Print
-  xfce4-screenshooter -f --clipboard
+# Print
+  gnome-screenshot -c
 
 shift + Print
-  xfce4-screenshooter -r --clipboard
+  gnome-screenshot -f ~/Pictures/Screenshots/"Screenshot_$(date '+%Y%m%d-%H%M%S').png"
 
 ctrl + Print
-   xfce4-screenshooter -f --save ~/Pictures/Screenshots
+  gnome-screenshot -d 1 -c -a
  
 ctrl + shift + Print
-  xfce4-screenshooter -r --save ~/Pictures/Screenshots
+  gnome-screenshot -d 1 -a -f ~/Pictures/Screenshots/"Screenshot_$(date '+%Y%m%d-%H%M%S').png"
 
 super + Print
-  xfce4-screenshooter
+  gnome-screenshot -i
 
 super + alt + Print
   peek
