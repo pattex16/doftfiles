@@ -37,4 +37,5 @@ export HISTFILE="$HOME/.cache/bash/bash.hist"
 export ICEAUTHORITY="$HOME/.cache/libice/iceauthority"
 # export XAUTHORITY="$HOME/.config/xorg/xauthority"
 export IPYTHONDIR="$HOME/.config/ipython"
+export JUPYTER_CONFIG_DIR="$HOME/.config/jupyter"
 
