@@ -104,6 +104,8 @@ nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
 
+let g:coc_disable_startup_warning = 1
+
 let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''

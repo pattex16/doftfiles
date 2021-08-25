@@ -112,5 +112,21 @@
   "python.dataScience.alwaysTrustNotebooks": true,
   "python.dataScience.allowUnauthorizedRemoteConnection": true,
   "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "redhat.telemetry.enabled": false,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
 }
