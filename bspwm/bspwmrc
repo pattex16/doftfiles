@@ -33,7 +33,7 @@ bspc rule -a Peek focus=on state=floating center=on rectangle=600x480
 bspc rule -a Magnus focus=on state=floating center=on rectangle=800x600+560+240
 bspc rule -a Kupfer.py focus=on center=on
 bspc rule -a Gnome-calculator focus=on center=on state=floating
-bspc rule -a kitty:*:scratchpad sticky=on state=floating rectangle=1600x280+160+38
+bspc rule -a kitty:*:scratchpad sticky=on state=floating rectangle=1600x280+160+44
 bspc rule -a Plank layer=above manage=on border=off focus=off
 
 export QT_STYLE_OVERRIDE=kvantum

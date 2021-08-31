@@ -53,8 +53,8 @@ super + shift + F
 super + d
   ~/.local/bin/script/bspwm/node-floating
 
-super + v
-  ~/.local/bin/script/bspwm/show-clipman
+# super + v
+#   ~/.local/bin/script/bspwm/show-clipman
 
 super + {_,shift + }w
 	~/.local/bin/script/bspwm/quit-node {c,k}
@@ -122,6 +122,7 @@ super + backslash
 
 super + {comma,period}
 	bspc desktop -f {prev,next}.local
+  # {~/.local/bin/script/bspwm/prev-desktop, ~/.local/bin/script/bspwm/next-desktop}
 
 super + shift + {comma,period}
   bspc node -d {prev,next}.local --follow;
@@ -131,6 +132,15 @@ super + alt + {q,r}
 
 super + g
 	bspc node -s biggest.window
+
+super + e
+  bspc node @focused:/ --rotate 90
+
+# super + a
+#   bspc node --flag marked
+
+# super + s
+#   bspc node -s $(bspc query -N -n .marked) && bspc node -g marked
 
 # super + {_,shift + }{1-6}
 # 	bspc {desktop -f,node -d} '^{1-6}'
