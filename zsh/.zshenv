@@ -22,6 +22,7 @@ export NODE_PATH="$HOME/.local/share/node"
 export NODE_REPL_HISTORY="$HOME/.cache/node/history"
 export PYLINTHOME="$HOME/.cache/pylint"
 export NPM_CONFIG_USERCONFIG="$HOME/.config/npm/npmrc"
+export QT_STYLE_OVERRIDE="kvantum"
 
 export RUSTUP_HOME="$HOME/.config/rustup"
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle

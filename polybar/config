@@ -60,7 +60,7 @@ font-0 = fixed:pixelsize=10;1
 font-1 = "RobotoMono Nerd Font Mono:style=Regular:size=10"
 font-2 = "RobotoMono Nerd Font Mono:style=Regular:size=10"
 
-modules-left = bspwm
+modules-left = bspwm my-plank
 modules-center = 
 modules-right = now-playing xbacklight pulseaudio memory cpu temperature system-bluetooth-bluetoothctl wlan eth battery-combined-udev date
 
@@ -111,6 +111,14 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/my-plank]
+type = custom/script
+content = <label>
+exec = ~/.local/bin/script/my-plank
+format-foreground = #dfdfdf
+; content-underline = #8ab4f8
+click-left = [[ -z $(pidof plank) ]] && plank || pkill plank &
 
 [module/now-playing]
 type = custom/script
@@ -433,6 +441,14 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+[module/windowlist]
+type = custom/script
+exec = ${env:P_BSPWM_WINDOW_CMD}
+interval = 0.5
+format = <label>
+format-background = #b2242424
+format-foreground = #dfdfdf
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -445,13 +461,4 @@ pseudo-transparency = true
 margin-top = 5
 margin-bottom = 5
 
-[module/windowlist]
-type = custom/script
-exec = ${env:P_BSPWM_WINDOW_CMD}
-interval = 0.5
-format = <label>
-format-background = #b2242424
-format-foreground = #dfdfdf
-
 ; vim:ft=dosini
-
