@@ -46,14 +46,24 @@ xsetroot -cursor_name left_ptr &
 bspc config -d 1 &
 xset r rate 260 60 &
 unclutter &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+#applets
+blueman-applet &
+nm-applet &
+# [[ -z $(pidof cbatticon) ]] && cbatticon -n & || pkill cbatticon ; cbatticon -n &
+# pa-applet &
 dunst -lb "#242424b2" -nb "#242424b2" -cb "#242424b2" -lfr "#8AB4F8" -nfr "#8AB4F8" -cfr "#8AB4F8" -lf "#f7f7f7" -nf "#f7f7f7" -cf "#f7f7f7" -lh "#FF1744" -nh "#FF1744" -ch "#FF1744"&
-picom --config ~/.config/picom/picomrc --experimental -d -b &
-# [[ -z $(pidof gnome-pie) ]] && gnome-pie &
+picom --config ~/.config/picom/picomrc --experimental -b &
 ~/.config/polybar/launch.sh &
 brightnessctl --device='tpacpi::kbd_backlight' set 1 &
-[[ -z $(pidof plank) ]] && plank || pkill plank ; plank &
 
+if [[ $(head -n1 ~/.local/bin/script/plank.txt) == "true" ]];
+then
+  [[ -z $(pidof plank) ]] && plank || pkill plank ; plank &
+fi
+
+~/.local/bin/script/gnome-keyring-bspwm &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # while pgrep -u $UID -f bspwm_window_titles >/dev/null; do pkill -f ~/.config/polybar/bspwm_window_titles; done ~/.config/polybar/bspwm_window_titles &
 
